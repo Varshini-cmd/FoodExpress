@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FoodExpress Menu</title>
+</head>
+<body>
+    <h1>Welcome to FoodExpress!</h1>
+    <h2>Today's Menu</h2>
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }} - ₹{{ item.price }} 
+                {% if item.is_available %}(Available){% else %}(Not Available){% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
